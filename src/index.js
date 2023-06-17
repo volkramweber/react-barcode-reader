@@ -102,10 +102,6 @@ class BarcodeScanner extends React.Component {
 
     const { target } = e
 
-    if (target instanceof window.HTMLElement && isInput(target)) {
-      return
-    }
-
     // If it's just the button of the scanner, ignore it and wait for the real input
     if (scanButtonKeyCode && e.which === scanButtonKeyCode) {
       this.scanButtonCounter += 1
